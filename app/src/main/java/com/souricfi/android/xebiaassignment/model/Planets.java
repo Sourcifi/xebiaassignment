@@ -3,9 +3,10 @@ package com.souricfi.android.xebiaassignment.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Planets {
+public class Planets implements Serializable {
 
     @SerializedName("count")
     @Expose
@@ -53,8 +54,9 @@ public class Planets {
     }
 
 
-    public class Result {
+    public class Result implements Serializable {
 
+        private int image;
         @SerializedName("name")
         @Expose
         private String name;
@@ -208,6 +210,14 @@ public class Planets {
 
         public void setUrl(String url) {
             this.url = url;
+        }
+
+        public int getImage() {
+            return image;
+        }
+
+        public void setImage(int image) {
+            this.image = image;
         }
     }
 }

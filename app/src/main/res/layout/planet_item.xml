@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="8dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/ivPlanet"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/ic_placeholder_black_24dp" />
+        android:contentDescription="Image"
+        android:elevation="8dp"
+        android:src="@mipmap/ic_launcher_round"
+        android:tint="@color/colorPrimary"
+        app:civ_border_color="@color/colorAccent" />
 
     <TextView
         android:id="@+id/txtPlanetName"
@@ -16,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ivPlanet"
         android:layout_centerHorizontal="true"
-        android:text="@string/app_name" />
-
-
+        android:layout_marginTop="8dp"
+        android:text="@string/app_name"
+        android:textStyle="bold" />
 </RelativeLayout>
